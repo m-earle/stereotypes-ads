@@ -306,7 +306,7 @@ winvars <- mergedfile.adult[c("dismembermeanwin", "bodyempmeanwin", "silencemean
                               "passivemeanwin", "posemeanwin", "childishadultmeanwin",
                               "sexualmeanwin", "assertmeanwin")]
 
-for (i in names(dichotomous)){
+for (i in names(winvars)){
   mergedfile.adult[[i]][mergedfile.adult[[i]] > mean(mergedfile.adult[[i]], na.rm= TRUE) + (3*(sd(mergedfile.adult[[i]], na.rm = TRUE)))] <- mean(mergedfile.adult[[i]], na.rm= TRUE) +(3*(sd(mergedfile.adult[[i]], na.rm = TRUE)))
   }
 
